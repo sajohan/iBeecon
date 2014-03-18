@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class bee_movement : MonoBehaviour {
+public class BeeMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
