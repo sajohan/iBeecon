@@ -1,8 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefabs/empty_script.cs">
     <Files>
       <File FileName="Assets/Prefabs/empty_script.cs" Line="4" Column="27" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Prefabs/EmptyScript.cs">
+    <Files>
+      <File FileName="Assets/Prefabs/EmptyScript.cs" Line="9" Column="3" />
+      <File FileName="Assets/UnityBeacon/BeaconHandler.cs" Line="54" Column="5" />
+>>>>>>> cbb5204dc43665878f197beba26908e95d809939
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
