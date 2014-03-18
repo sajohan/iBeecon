@@ -50,8 +50,8 @@ public class iosPlugin : MonoBehaviour {
 				tmp.updateRangingData(beacon.proximity, beacon.accuracy, beacon.rssi);
 			}
 		}
-		GameObject camera = GameObject.Find("Main Camera");
-		((BeaconGUI)camera.GetComponent(typeof(BeaconGUI))).jsonLabelText = beaconJSON;
+		//GameObject camera = GameObject.Find("Main Camera");
+		//((BeaconGUI)camera.GetComponent(typeof(BeaconGUI))).jsonLabelText = beaconJSON;
 	}
 
 
