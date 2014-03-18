@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UnityBeacon/BeaconHandler.cs">
     <Files>
-      <File FileName="Assets/UnityBeacon/BeaconHandler.cs" Line="22" Column="34" />
+      <File FileName="Assets/UnityBeacon/BeaconHandler.cs" Line="19" Column="14" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
