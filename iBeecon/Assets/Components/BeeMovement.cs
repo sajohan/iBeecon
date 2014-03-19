@@ -11,8 +11,9 @@ public class BeeMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position += transform.forward * speed * Time.deltaTime;
-		transform.Translate(5f * Time.deltaTime, 0f, 0f);
+		//transform.position += transform.forward * speed * Time.deltaTime;
+		//transform.Translate(5f * Time.deltaTime, 0f, 0f);
+
 	}
 
 }
