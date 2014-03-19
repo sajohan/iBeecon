@@ -7,7 +7,7 @@ public class BeaconHandler : MonoBehaviour {
 	//Example of return value from native
 	//[{"major":100,"minor":10,"uuid":"BE5D05DF-3075-4DE2-95D2-D946525B7885","accuracy":0.02782559401302485,"rssi":-31,"proximity":0}]
 
-	public ArrayList beacons;
+	private ArrayList beacons;
 
 	/*----------------- Native Functions -----------------*/
 
@@ -83,4 +83,8 @@ public class BeaconHandler : MonoBehaviour {
 		return false;
 	}
 
+
+	public ArrayList getBeacons(){
+		return beacons;
+	}
 }
