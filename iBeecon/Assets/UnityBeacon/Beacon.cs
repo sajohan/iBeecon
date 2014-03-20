@@ -13,6 +13,19 @@ public class Beacon{
 	public double accuracy;
 	public int rssi;
 
+
+	public Beacon(string uuid, int major, int minor){
+
+		this.uuid = uuid;
+		this.major = major;
+		this.minor = minor;
+		this.proximity = Proximity.Unknown;
+		this.accuracy = -1;
+		this.rssi = -1;
+
+
+	}
+
 	public Beacon(string uuid, int major, int minor, int prox, double accuracy, int rssi){
 		this.uuid = uuid;
 		this.major = major;

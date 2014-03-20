@@ -7,7 +7,7 @@ public class BeaconHandler : MonoBehaviour {
 	//Example of return value from native
 	//[{"major":100,"minor":10,"uuid":"BE5D05DF-3075-4DE2-95D2-D946525B7885","accuracy":0.02782559401302485,"rssi":-31,"proximity":0}]
 
-	private ArrayList beacons;
+	public ArrayList beacons;
 
 	/*----------------- Native Functions -----------------*/
 
@@ -19,6 +19,11 @@ public class BeaconHandler : MonoBehaviour {
 	/*----------------------------------------------------*/
 
 	void Start(){
+		if(this.beacons == null){
+			beacons = new ArrayList();
+		}
+		//updateBeaconData("[{\"major\":1,\"minor\":1,\"uuid\":\"BE5D05DF-3075-4DE2-95D2-D946525B7885\",\"accuracy\":0.4641588833612779,\"rssi\":-53,\"proximity\":1}]");
+
 #if UNITY_IPHONE && !UNITY_EDITOR
 		this.initIBeacon();
 #endif
@@ -28,14 +33,11 @@ public class BeaconHandler : MonoBehaviour {
 		Debug.Log("Init in Unity");
 		string uuid = "BE5D05DF-3075-4DE2-95D2-D946525B7885";
 
-		if(this.beacons == null){
-			beacons = new ArrayList();
-		}
 
 		initBeaconManager();
 		monitorRegionWithUUID(uuid);
 
-
+		updateBeaconData("[{\"major\":1,\"minor\":1,\"uuid\":\"BE5D05DF-3075-4DE2-95D2-D946525B7885\",\"accuracy\":0.4641588833612779,\"rssi\":-53,\"proximity\":1}]");
 	}
 
 	public void updateBeaconData(string beaconJSON){
@@ -63,7 +65,7 @@ public class BeaconHandler : MonoBehaviour {
 	}
 
 
-	private Beacon getBeacon(Beacon beacon){
+	public Beacon getBeacon(Beacon beacon){
 
 		foreach(Beacon b in beacons){
 			if(b.sameAsBeacon(beacon)){
