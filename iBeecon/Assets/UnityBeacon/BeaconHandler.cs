@@ -22,7 +22,7 @@ public class BeaconHandler : MonoBehaviour {
 		if(this.beacons == null){
 			beacons = new ArrayList();
 		}
-		//updateBeaconData("[{\"major\":1,\"minor\":1,\"uuid\":\"BE5D05DF-3075-4DE2-95D2-D946525B7885\",\"accuracy\":0.4641588833612779,\"rssi\":-53,\"proximity\":1}]");
+		updateBeaconData("[{\"major\":1,\"minor\":1,\"uuid\":\"BE5D05DF-3075-4DE2-95D2-D946525B7885\",\"accuracy\":0.4641588833612779,\"rssi\":-53,\"proximity\":1}]");
 
 #if UNITY_IPHONE && !UNITY_EDITOR
 		this.initIBeacon();
@@ -36,8 +36,7 @@ public class BeaconHandler : MonoBehaviour {
 
 		initBeaconManager();
 		monitorRegionWithUUID(uuid);
-
-		updateBeaconData("[{\"major\":1,\"minor\":1,\"uuid\":\"BE5D05DF-3075-4DE2-95D2-D946525B7885\",\"accuracy\":0.4641588833612779,\"rssi\":-53,\"proximity\":1}]");
+	
 	}
 
 	public void updateBeaconData(string beaconJSON){

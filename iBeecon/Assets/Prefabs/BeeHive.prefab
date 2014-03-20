@@ -66,9 +66,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69a72f20c072742bebe9253864d0c228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bee: {fileID: 100000, guid: 2dffad1067a1743908c4373e022aa544, type: 2}
+  beePrefab: {fileID: 100000, guid: 2dffad1067a1743908c4373e022aa544, type: 2}
   spawnDelay: 10
   beeCount: 5
+  uuid: 
+  majorValue: 0
+  minorValue: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

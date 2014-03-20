@@ -1,16 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Components/BeeSpawner.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/UnityBeacon/BeaconHandler.cs">
     <Files>
-      <File FileName="Assets/Components/BeeSpawner.cs" Line="59" Column="25" />
-      <File FileName="Assets/UnityBeacon/BeaconHandler.cs" Line="12" Column="31" />
-      <File FileName="Assets/Components/BeeMovement.cs" Line="14" Column="5" />
-      <File FileName="Assets/UnityBeacon/Beacon.cs" Line="24" Column="18" />
+      <File FileName="Assets/Components/BeehiveNotifier.cs" Line="13" Column="2" />
+      <File FileName="Assets/Components/BeeSpawner.cs" Line="71" Column="72" />
+      <File FileName="Assets/UnityBeacon/BeaconHandler.cs" Line="69" Column="15" />
+      <File FileName="Assets/Components/BeeMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets/UnityBeacon/Beacon.cs" Line="1" Column="1" />
       <File FileName="Assets/UnityBeacon/JSONObject.cs" Line="1" Column="1" />
+      <File FileName="Assets/Components/BeeTouch.cs" Line="36" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/johan/Documents/Programming/Unity/iBeecon/iBeecon/Assets/Components/BeeTouch.cs" line="38" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
