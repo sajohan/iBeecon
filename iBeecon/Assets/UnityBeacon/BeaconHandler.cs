@@ -8,6 +8,8 @@ public class BeaconHandler : MonoBehaviour {
 	//[{"major":100,"minor":10,"uuid":"BE5D05DF-3075-4DE2-95D2-D946525B7885","accuracy":0.02782559401302485,"rssi":-31,"proximity":0}]
 
 	public ArrayList beacons;
+	public string enteredRegionNotificationMsg;
+	
 
 	/*----------------- Native Functions -----------------*/
 
@@ -15,6 +17,8 @@ public class BeaconHandler : MonoBehaviour {
 	private static extern void initBeaconManager();
 	[DllImport ("__Internal")]
 	private static extern void monitorRegionWithUUID(string uuid);
+	[DllImport ("__Internal")]
+	private static extern void setLocalNotificationWhenEnteringRegion(string msg);
 
 	/*----------------------------------------------------*/
 
@@ -22,11 +26,11 @@ public class BeaconHandler : MonoBehaviour {
 		if(this.beacons == null){
 			beacons = new ArrayList();
 		}
-		updateBeaconData("[{\"major\":1,\"minor\":1,\"uuid\":\"BE5D05DF-3075-4DE2-95D2-D946525B7885\",\"accuracy\":0.4641588833612779,\"rssi\":-53,\"proximity\":1}]");
-
-#if UNITY_IPHONE && !UNITY_EDITOR
+		//updateBeaconData("[{\"major\":1,\"minor\":1,\"uuid\":\"BE5D05DF-3075-4DE2-95D2-D946525B7885\",\"accuracy\":0.4641588833612779,\"rssi\":-53,\"proximity\":1}]");
+		Debug.Log(enteredRegionNotificationMsg);
+		#if UNITY_IPHONE && !UNITY_EDITOR
 		this.initIBeacon();
-#endif
+		#endif
 	}
 	
 	public void initIBeacon(){
@@ -36,7 +40,11 @@ public class BeaconHandler : MonoBehaviour {
 
 		initBeaconManager();
 		monitorRegionWithUUID(uuid);
-	
+
+		//if(enteredRegionNotificationMsg != null){
+		//	setLocalNotificationWhenEnteringRegion(enteredRegionNotificationMsg);
+		//}
+
 	}
 
 	public void updateBeaconData(string beaconJSON){
@@ -52,15 +60,19 @@ public class BeaconHandler : MonoBehaviour {
 			//Check if beacon already exists. If it doesn't exist add it to the list. If it exists update the ranging values.
 			Beacon tmp = this.getBeacon(beacon);
 			if(tmp == null){
-				Debug.Log("New Beacon!");
+				//Debug.Log("New Beacon!");
 				beacons.Add(beacon);
 			}else{
-				Debug.Log("Beacon already exists!");
+				//Debug.Log("Beacon already exists!");
 				tmp.updateRangingData(beacon.proximity, beacon.accuracy, beacon.rssi);
 			}
 		}
 		//GameObject camera = GameObject.Find("Main Camera");
 		//((BeaconGUI)camera.GetComponent(typeof(BeaconGUI))).jsonLabelText = beaconJSON;
+	}
+
+	public void setEnterRegionNotificationMsg(string msg){
+		setLocalNotificationWhenEnteringRegion(msg);
 	}
 
 

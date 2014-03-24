@@ -260,7 +260,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 25
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2
@@ -360,6 +360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99857cff61bf043cea67285a595d49c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enteredRegionNotificationMsg: Beehive near
 --- !u!114 &1014081631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +991,7 @@ GUIText:
   m_TabSize: 4
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Material: {fileID: 0}
-  m_FontSize: 0
+  m_FontSize: 25
   m_FontStyle: 0
   m_Color:
     serializedVersion: 2

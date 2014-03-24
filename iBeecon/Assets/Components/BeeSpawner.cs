@@ -64,7 +64,7 @@ public class BeeSpawner : MonoBehaviour {
 
 		beesCatched++;
 		//Debug.Log("Bees catched: " + beesCatched);
-		catchedBeesLabel.guiText.text = "Catched bees: " + beesCatched;
+		catchedBeesLabel.guiText.text = "Caught bees: " + beesCatched;
 	}
 
 
